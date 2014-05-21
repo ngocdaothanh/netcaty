@@ -27,8 +27,7 @@ class Server(port: Int, handler: netcaty.http.RequestHandler) {
       .bind(port)
       .sync()  // Wait for the port to be bound
       .channel
-
-    realPort = serverChannel.localAddress.asInstanceOf[InetSocketAddress].getPort
+    realPort      = serverChannel.localAddress.asInstanceOf[InetSocketAddress].getPort
   }
 
   def getPort = realPort
