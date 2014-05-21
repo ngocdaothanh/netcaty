@@ -19,6 +19,8 @@ TODO (pull requests are welcome):
 * HTTPS
 * TCP
 
+`Scaladoc <http://ngocdaothanh.github.io/netcaty/#netcaty.http.package>`_
+
 HTTP server
 -----------
 
