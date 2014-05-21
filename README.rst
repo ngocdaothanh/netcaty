@@ -83,14 +83,12 @@ Be familiar with Netty
 ----------------------
 
 To create and inspect requests/responses, you should be familiar with things in
-`package io.netty.handler.codec.http <http://netty.io/4.0/api/io/netty/handler/codec/http/package-frame.html>`_
-and
-`package io.netty.buffer <http://netty.io/4.0/api/io/netty/buffer/package-frame.html>`_.
-of
-`Netty <http://netty.io/4.0/api/index.html>`_.
+package `io.netty.handler.codec.http <http://netty.io/4.0/api/io/netty/handler/codec/http/package-frame.html>`_
+and `io.netty.buffer <http://netty.io/4.0/api/io/netty/buffer/package-frame.html>`_
+in `Netty Javadoc <http://netty.io/4.0/api/index.html>`_.
 
-* req: `FullHttpRequest <http://netty.io/4.0/api/io/netty/handler/codec/http/FullHttpRequest.html>`_
-* res: `FullHttpResponse <http://netty.io/4.0/api/io/netty/handler/codec/http/FullHttpResponse.html>`_
+* ``req``: `FullHttpRequest <http://netty.io/4.0/api/io/netty/handler/codec/http/FullHttpRequest.html>`_
+* ``res``: `FullHttpResponse <http://netty.io/4.0/api/io/netty/handler/codec/http/FullHttpResponse.html>`_
 
 Use with SBT
 ------------
@@ -104,8 +102,8 @@ Supported Scala versions: 2.10.x, 2.11.x
 Netcat
 ------
 
-For simple problems, maybe you can use `Netcat <http://en.wikipedia.org/wiki/Netcat>`_,
-like this:
+For more simple problems, maybe you don't need to use additionaly library. You
+can use `Netcat <http://en.wikipedia.org/wiki/Netcat>`_, like this:
 
 ::
 
