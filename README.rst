@@ -108,6 +108,12 @@ Supported Scala versions: 2.10.x, 2.11.x
 
   libraryDependencies += "tv.cntt" % "netcaty" %% "1.1"
 
+Netcaty uses Netty 4. Javassist can boost Netty 4 speed. Optionally, you can add:
+
+::
+
+  libraryDependencies += "org.javassist" % "javassist" % "3.18.1-GA"
+
 Netcat
 ------
 
