@@ -5,7 +5,9 @@ import io.netty.channel.socket.SocketChannel
 import io.netty.handler.codec.http.{FullHttpResponse, HttpContentDecompressor, HttpObjectAggregator, HttpRequestEncoder, HttpResponseDecoder}
 import io.netty.util.concurrent.Promise
 
-class PipelineInitializer(resPromise: Promise[FullHttpResponse]) extends ChannelInitializer[SocketChannel] {
+class PipelineInitializer(resPromise_or_handler: Either[Promise[FullHttpResponse], netcaty.http.ResponseHandler])
+  extends ChannelInitializer[SocketChannel]
+{
   def initChannel(ch: SocketChannel) {
     ch.pipeline.addLast(
       // Outbound
@@ -15,7 +17,7 @@ class PipelineInitializer(resPromise: Promise[FullHttpResponse]) extends Channel
       new HttpResponseDecoder,
       new HttpContentDecompressor,
       new HttpObjectAggregator(netcaty.http.MAX_CONTENT_LENGTH),  // Handle chunks
-      new ResponseHandler(resPromise)
+      new ResponseHandler(resPromise_or_handler)
     )
   }
 }

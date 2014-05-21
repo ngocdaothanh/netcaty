@@ -28,6 +28,7 @@ package object http {
   }
 
   def request(host: String, port: Int, req: FullHttpRequest, handler: ResponseHandler) {
-
+    val client = new Client(host, port, req)
+    client.request(handler)
   }
 }
