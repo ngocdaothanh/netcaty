@@ -1,7 +1,13 @@
 package netcaty.http.server
 
-import io.netty.channel.{ChannelFuture, ChannelFutureListener, ChannelHandlerContext, SimpleChannelInboundHandler}
-import io.netty.handler.codec.http.{DefaultFullHttpResponse, FullHttpRequest, FullHttpResponse, HttpHeaders, HttpResponseStatus, HttpVersion}
+import io.netty.channel.{
+  ChannelHandlerContext, SimpleChannelInboundHandler,
+  ChannelFuture, ChannelFutureListener
+}
+import io.netty.handler.codec.http.{
+  FullHttpRequest, FullHttpResponse,
+  DefaultFullHttpResponse, HttpHeaders, HttpResponseStatus, HttpVersion
+}
 
 class RequestHandler(server: Server, handler: netcaty.http.RequestHandler, stopAfterOneResponse: Boolean)
   extends SimpleChannelInboundHandler[FullHttpRequest]

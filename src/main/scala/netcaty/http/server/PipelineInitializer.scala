@@ -7,12 +7,10 @@ import io.netty.handler.stream.ChunkedWriteHandler
 
 class PipelineInitializer(server: Server, handler: netcaty.http.RequestHandler, stopAfterOneResponse: Boolean) extends ChannelInitializer[SocketChannel] {
   def initChannel(ch: SocketChannel) {
-    val p = ch.pipeline
-
-    p.addLast(
+    ch.pipeline.addLast(
       // Inbound
       new HttpRequestDecoder,
-      new HttpObjectAggregator(16 * 1024 * 1024),  // Handle chunks
+      new HttpObjectAggregator(netcaty.http.MAX_CONTENT_LENGTH),  // Handle chunks
       new RequestHandler(server, handler, stopAfterOneResponse),
 
       // Outbound

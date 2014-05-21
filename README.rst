@@ -6,6 +6,15 @@ They are useful for writing servers/client tests.
 
 This Scala library is small, the only dependency is Netty.
 
+Features
+--------
+
+HTTP:
+
+* Server
+* Client
+* Can handle chunks up to 16 MB
+
 HTTP server
 -----------
 
@@ -45,7 +54,9 @@ Sync mode:
 
   val req = ...  // Create a FullHttpRequest
   val res = netcaty.http.request("localhost", 9000, req)
-  // Do whatever you want with the response here.
+
+  // After using the response:
+  res.release()
 
 Async mode:
 
@@ -53,7 +64,8 @@ Async mode:
 
   val req = ...  // Create a FullHttpRequest
   netcaty.http.request("localhost", 9000, req, { res =>
-    // Do whatever you want with the response here.
+    // The response is released automatically, you don't have to call:
+    // res.release()
   })
 
 Use with SBT
