@@ -21,6 +21,19 @@ TODO (pull requests are welcome):
 
 `Scaladoc <http://ngocdaothanh.github.io/netcaty/#netcaty.http.package>`_
 
+Be familiar with Netty
+----------------------
+
+To create and inspect requests/responses, you should be familiar with things in
+package `io.netty.handler.codec.http <http://netty.io/4.0/api/io/netty/handler/codec/http/package-frame.html>`_
+and `io.netty.buffer <http://netty.io/4.0/api/io/netty/buffer/package-frame.html>`_
+in `Netty Javadoc <http://netty.io/4.0/api/index.html>`_.
+
+``req`` and ``res`` in the examples below are:
+
+* ``req``: `FullHttpRequest <http://netty.io/4.0/api/io/netty/handler/codec/http/FullHttpRequest.html>`_
+* ``res``: `FullHttpResponse <http://netty.io/4.0/api/io/netty/handler/codec/http/FullHttpResponse.html>`_
+
 HTTP server
 -----------
 
@@ -36,7 +49,7 @@ manually call ``Thread.sleep(someTime)`` to wait for the server to be started.
 The server runs on a separate thread. It sends only one response and after that
 stops immediately.
 
-To respond multiple responses:
+If you don't want to stop the server after one response:
 
 ::
 
@@ -80,17 +93,6 @@ Async mode:
   netcaty.http.request("localhost", 9000, req, { res =>
     ...
   })
-
-Be familiar with Netty
-----------------------
-
-To create and inspect requests/responses, you should be familiar with things in
-package `io.netty.handler.codec.http <http://netty.io/4.0/api/io/netty/handler/codec/http/package-frame.html>`_
-and `io.netty.buffer <http://netty.io/4.0/api/io/netty/buffer/package-frame.html>`_
-in `Netty Javadoc <http://netty.io/4.0/api/index.html>`_.
-
-* ``req``: `FullHttpRequest <http://netty.io/4.0/api/io/netty/handler/codec/http/FullHttpRequest.html>`_
-* ``res``: `FullHttpResponse <http://netty.io/4.0/api/io/netty/handler/codec/http/FullHttpResponse.html>`_
 
 Use with SBT
 ------------
