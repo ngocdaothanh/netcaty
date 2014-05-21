@@ -10,7 +10,7 @@ Features
 
 HTTP:
 
-* Server
+* Server, can start at random open port, very useful for tests
 * Client
 * Can handle chunks up to 16 MB
 
@@ -37,6 +37,8 @@ in `Netty Javadoc <http://netty.io/4.0/api/index.html>`_.
 HTTP server
 -----------
 
+Start server at port 9000:
+
 ::
 
   netcaty.http.respondOne(9000, { case (req, res) =>
@@ -60,6 +62,9 @@ If you don't want to stop the server after one response:
 
   // Later:
   server.stop()
+
+Port 0 means Netcaty will start server at a random open port. This is very useful
+for writing tests. To get the real port, call ``server.getPort``.
 
 HTTP client
 -----------
@@ -101,7 +106,7 @@ Supported Scala versions: 2.10.x, 2.11.x
 
 ::
 
-  libraryDependencies += "tv.cntt" % "netcaty" %% "1.0"
+  libraryDependencies += "tv.cntt" % "netcaty" %% "1.1"
 
 Netcat
 ------

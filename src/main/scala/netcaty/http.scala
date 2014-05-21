@@ -11,9 +11,10 @@ package object http {
 
   val MAX_CONTENT_LENGTH = 16 * 1024 * 1024
 
-  def respondOne(port: Int, handler: RequestHandler) {
+  def respondOne(port: Int, handler: RequestHandler): Server = {
     val server = new Server(port, handler)
     server.start(true)
+    server
   }
 
   def respond(port: Int, handler: RequestHandler): Server = {
