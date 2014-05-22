@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>PipelineInitializer - netcaty.http.server.PipelineInitializer</title>
-          <meta name="description" content="PipelineInitializer - netcaty.http.server.PipelineInitializer" />
-          <meta name="keywords" content="PipelineInitializer netcaty.http.server.PipelineInitializer" />
+          <title>PipelineInitializer - netcaty.http_https.client.PipelineInitializer</title>
+          <meta name="description" content="PipelineInitializer - netcaty.http https.client.PipelineInitializer" />
+          <meta name="keywords" content="PipelineInitializer netcaty.http https.client.PipelineInitializer" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'netcaty.http.server.PipelineInitializer';
+            var hash = 'netcaty.http_https.client.PipelineInitializer';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -29,7 +29,7 @@
         <body class="type">
       <div id="definition">
         <img src="../../../lib/class_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="netcaty">netcaty</a>.<a href="../package.html" class="extype" name="netcaty.http">http</a>.<a href="package.html" class="extype" name="netcaty.http.server">server</a></p>
+        <p id="owner"><a href="../../package.html" class="extype" name="netcaty">netcaty</a>.<a href="../package.html" class="extype" name="netcaty.http_https">http_https</a>.<a href="package.html" class="extype" name="netcaty.http_https.client">client</a></p>
         <h1>PipelineInitializer</h1>
       </div>
 
@@ -63,7 +63,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="netcaty.http.server.PipelineInitializer"><span>PipelineInitializer</span></li><li class="in" name="io.netty.channel.ChannelInitializer"><span>ChannelInitializer</span></li><li class="in" name="io.netty.channel.ChannelInboundHandlerAdapter"><span>ChannelInboundHandlerAdapter</span></li><li class="in" name="io.netty.channel.ChannelInboundHandler"><span>ChannelInboundHandler</span></li><li class="in" name="io.netty.channel.ChannelHandlerAdapter"><span>ChannelHandlerAdapter</span></li><li class="in" name="io.netty.channel.ChannelHandler"><span>ChannelHandler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="netcaty.http_https.client.PipelineInitializer"><span>PipelineInitializer</span></li><li class="in" name="io.netty.channel.ChannelInitializer"><span>ChannelInitializer</span></li><li class="in" name="io.netty.channel.ChannelInboundHandlerAdapter"><span>ChannelInboundHandlerAdapter</span></li><li class="in" name="io.netty.channel.ChannelInboundHandler"><span>ChannelInboundHandler</span></li><li class="in" name="io.netty.channel.ChannelHandlerAdapter"><span>ChannelHandlerAdapter</span></li><li class="in" name="io.netty.channel.ChannelHandler"><span>ChannelHandler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -83,8 +83,8 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="netcaty.http.server.PipelineInitializer#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(server:netcaty.http.server.Server,handler:netcaty.http.RequestHandler,stopAfterOneResponse:Boolean):netcaty.http.server.PipelineInitializer"></a>
+              <ol><li name="netcaty.http_https.client.PipelineInitializer#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(https:Boolean,resPromise_or_handler:Either[io.netty.util.concurrent.Promise[io.netty.handler.codec.http.FullHttpResponse],netcaty.HttpHttps.ResponseHandler]):netcaty.http_https.client.PipelineInitializer"></a>
       <a id="&lt;init&gt;:PipelineInitializer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -92,7 +92,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">PipelineInitializer</span><span class="params">(<span name="server">server: <a href="Server.html" class="extype" name="netcaty.http.server.Server">Server</a></span>, <span name="handler">handler: <a href="../package.html#RequestHandler=(io.netty.handler.codec.http.FullHttpRequest,io.netty.handler.codec.http.FullHttpResponse)=&gt;Unit" class="extmbr" name="netcaty.http.RequestHandler">http.RequestHandler</a></span>, <span name="stopAfterOneResponse">stopAfterOneResponse: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span>
+        <span class="name">PipelineInitializer</span><span class="params">(<span name="https">https: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="resPromise_or_handler">resPromise_or_handler: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="io.netty.util.concurrent.Promise">Promise</span>[<span class="extype" name="io.netty.handler.codec.http.FullHttpResponse">FullHttpResponse</span>], <a href="../../HttpHttps$.html#ResponseHandler=io.netty.handler.codec.http.FullHttpResponse=&gt;Unit" class="extmbr" name="netcaty.HttpHttps.ResponseHandler">HttpHttps.ResponseHandler</a>]</span>)</span>
       </span>
       </h4>
       
@@ -437,7 +437,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="netcaty.http.server.PipelineInitializer#initChannel" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="netcaty.http_https.client.PipelineInitializer#initChannel" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="initChannel(ch:io.netty.channel.socket.SocketChannel):Unit"></a>
       <a id="initChannel(SocketChannel):Unit"></a>
       <h4 class="signature">
@@ -449,7 +449,7 @@
         <span class="name">initChannel</span><span class="params">(<span name="ch">ch: <span class="extype" name="io.netty.channel.socket.SocketChannel">SocketChannel</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="netcaty.http.server.PipelineInitializer">PipelineInitializer</a> → ChannelInitializer</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="netcaty.http_https.client.PipelineInitializer">PipelineInitializer</a> → ChannelInitializer</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>

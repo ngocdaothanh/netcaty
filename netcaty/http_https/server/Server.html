@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>Server - netcaty.http.server.Server</title>
-          <meta name="description" content="Server - netcaty.http.server.Server" />
-          <meta name="keywords" content="Server netcaty.http.server.Server" />
+          <title>Server - netcaty.http_https.server.Server</title>
+          <meta name="description" content="Server - netcaty.http https.server.Server" />
+          <meta name="keywords" content="Server netcaty.http https.server.Server" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'netcaty.http.server.Server';
+            var hash = 'netcaty.http_https.server.Server';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -29,7 +29,7 @@
         <body class="type">
       <div id="definition">
         <img src="../../../lib/class_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="netcaty">netcaty</a>.<a href="../package.html" class="extype" name="netcaty.http">http</a>.<a href="package.html" class="extype" name="netcaty.http.server">server</a></p>
+        <p id="owner"><a href="../../package.html" class="extype" name="netcaty">netcaty</a>.<a href="../package.html" class="extype" name="netcaty.http_https">http_https</a>.<a href="package.html" class="extype" name="netcaty.http_https.server">server</a></p>
         <h1>Server</h1>
       </div>
 
@@ -63,7 +63,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="netcaty.http.server.Server"><span>Server</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="netcaty.http_https.server.Server"><span>Server</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -83,8 +83,8 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="netcaty.http.server.Server#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(port:Int,handler:netcaty.http.RequestHandler):netcaty.http.server.Server"></a>
+              <ol><li name="netcaty.http_https.server.Server#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(https:Boolean,port:Int,handler:netcaty.HttpHttps.RequestHandler):netcaty.http_https.server.Server"></a>
       <a id="&lt;init&gt;:Server"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -92,7 +92,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Server</span><span class="params">(<span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="handler">handler: <a href="../package.html#RequestHandler=(io.netty.handler.codec.http.FullHttpRequest,io.netty.handler.codec.http.FullHttpResponse)=&gt;Unit" class="extmbr" name="netcaty.http.RequestHandler">http.RequestHandler</a></span>)</span>
+        <span class="name">Server</span><span class="params">(<span name="https">https: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="handler">handler: <a href="../../HttpHttps$.html#RequestHandler=(io.netty.handler.codec.http.FullHttpRequest,io.netty.handler.codec.http.FullHttpResponse)=&gt;Unit" class="extmbr" name="netcaty.HttpHttps.RequestHandler">HttpHttps.RequestHandler</a></span>)</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">port</dt><dd class="cmt"><p>0 means random open port; call realPort after starting to get the real port
@@ -235,7 +235,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="netcaty.http.server.Server#getPort" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="netcaty.http_https.server.Server#getPort" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getPort:Int"></a>
       <a id="getPort:Int"></a>
       <h4 class="signature">
@@ -313,7 +313,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="netcaty.http.server.Server#start" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="netcaty.http_https.server.Server#start" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="start(stopAfterOneResponse:Boolean):Unit"></a>
       <a id="start(Boolean):Unit"></a>
       <h4 class="signature">
@@ -326,7 +326,7 @@
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Port number</p></dd></dl></div>
-    </li><li name="netcaty.http.server.Server#stop" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="netcaty.http_https.server.Server#stop" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="stop():Unit"></a>
       <a id="stop():Unit"></a>
       <h4 class="signature">

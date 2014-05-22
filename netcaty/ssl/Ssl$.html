@@ -1,22 +1,22 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>Client - netcaty.http.client.Client</title>
-          <meta name="description" content="Client - netcaty.http.client.Client" />
-          <meta name="keywords" content="Client netcaty.http.client.Client" />
+          <title>Ssl - netcaty.ssl.Ssl</title>
+          <meta name="description" content="Ssl - netcaty.ssl.Ssl" />
+          <meta name="keywords" content="Ssl netcaty.ssl.Ssl" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
-      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
       
       <script type="text/javascript">
          if(top === self) {
-            var url = '../../../index.html';
-            var hash = 'netcaty.http.client.Client';
+            var url = '../../index.html';
+            var hash = 'netcaty.ssl.Ssl$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -26,20 +26,20 @@
    	  </script>
     
         </head>
-        <body class="type">
+        <body class="value">
       <div id="definition">
-        <img src="../../../lib/class_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="netcaty">netcaty</a>.<a href="../package.html" class="extype" name="netcaty.http">http</a>.<a href="package.html" class="extype" name="netcaty.http.client">client</a></p>
-        <h1>Client</h1>
+        <img src="../../lib/object_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="netcaty">netcaty</a>.<a href="package.html" class="extype" name="netcaty.ssl">ssl</a></p>
+        <h1>Ssl</h1>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Client</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">Ssl</span>
       </span>
       </h4>
       
@@ -63,7 +63,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="netcaty.http.client.Client"><span>Client</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="netcaty.ssl.Ssl"><span>Ssl</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -81,23 +81,7 @@
 
       <div id="template">
         <div id="allMembers">
-        <div id="constructors" class="members">
-              <h3>Instance Constructors</h3>
-              <ol><li name="netcaty.http.client.Client#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(host:String,port:Int,req:io.netty.handler.codec.http.FullHttpRequest):netcaty.http.client.Client"></a>
-      <a id="&lt;init&gt;:Client"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Client</span><span class="params">(<span name="host">host: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="req">req: <span class="extype" name="io.netty.handler.codec.http.FullHttpRequest">FullHttpRequest</span></span>)</span>
-      </span>
-      </h4>
-      
-    </li></ol>
-            </div>
+        
 
         
 
@@ -169,13 +153,39 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="netcaty.ssl.Ssl#createClientHandler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="createClientHandler():io.netty.handler.ssl.SslHandler"></a>
+      <a id="createClientHandler():SslHandler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createClientHandler</span><span class="params">()</span><span class="result">: <span class="extype" name="io.netty.handler.ssl.SslHandler">SslHandler</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">SSL handler cannot be shared.</p>
+    </li><li name="netcaty.ssl.Ssl#createServerHandler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="createServerHandler():io.netty.handler.ssl.SslHandler"></a>
+      <a id="createServerHandler():SslHandler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createServerHandler</span><span class="params">()</span><span class="result">: <span class="extype" name="io.netty.handler.ssl.SslHandler">SslHandler</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">SSL handler cannot be shared.</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -214,7 +224,7 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -299,32 +309,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="netcaty.http.client.Client#request" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="request(handler:netcaty.http.ResponseHandler):Unit"></a>
-      <a id="request(http.ResponseHandler):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">request</span><span class="params">(<span name="handler">handler: <a href="../package.html#ResponseHandler=io.netty.handler.codec.http.FullHttpResponse=&gt;Unit" class="extmbr" name="netcaty.http.ResponseHandler">http.ResponseHandler</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="netcaty.http.client.Client#request" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="request():io.netty.handler.codec.http.FullHttpResponse"></a>
-      <a id="request():FullHttpResponse"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">request</span><span class="params">()</span><span class="result">: <span class="extype" name="io.netty.handler.codec.http.FullHttpResponse">FullHttpResponse</span></span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

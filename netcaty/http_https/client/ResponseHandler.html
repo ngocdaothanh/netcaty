@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>PipelineInitializer - netcaty.http.client.PipelineInitializer</title>
-          <meta name="description" content="PipelineInitializer - netcaty.http.client.PipelineInitializer" />
-          <meta name="keywords" content="PipelineInitializer netcaty.http.client.PipelineInitializer" />
+          <title>ResponseHandler - netcaty.http_https.client.ResponseHandler</title>
+          <meta name="description" content="ResponseHandler - netcaty.http https.client.ResponseHandler" />
+          <meta name="keywords" content="ResponseHandler netcaty.http https.client.ResponseHandler" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'netcaty.http.client.PipelineInitializer';
+            var hash = 'netcaty.http_https.client.ResponseHandler';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -29,8 +29,8 @@
         <body class="type">
       <div id="definition">
         <img src="../../../lib/class_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="netcaty">netcaty</a>.<a href="../package.html" class="extype" name="netcaty.http">http</a>.<a href="package.html" class="extype" name="netcaty.http.client">client</a></p>
-        <h1>PipelineInitializer</h1>
+        <p id="owner"><a href="../../package.html" class="extype" name="netcaty">netcaty</a>.<a href="../package.html" class="extype" name="netcaty.http_https">http_https</a>.<a href="package.html" class="extype" name="netcaty.http_https.client">client</a></p>
+        <h1>ResponseHandler</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -39,13 +39,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">PipelineInitializer</span><span class="result"> extends <span class="extype" name="io.netty.channel.ChannelInitializer">ChannelInitializer</span>[<span class="extype" name="io.netty.channel.socket.SocketChannel">SocketChannel</span>]</span>
+        <span class="name">ResponseHandler</span><span class="result"> extends <span class="extype" name="io.netty.channel.SimpleChannelInboundHandler">SimpleChannelInboundHandler</span>[<span class="extype" name="io.netty.handler.codec.http.FullHttpResponse">FullHttpResponse</span>]</span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="io.netty.channel.ChannelInitializer">ChannelInitializer</span>[<span class="extype" name="io.netty.channel.socket.SocketChannel">SocketChannel</span>], <span class="extype" name="io.netty.channel.ChannelInboundHandlerAdapter">ChannelInboundHandlerAdapter</span>, <span class="extype" name="io.netty.channel.ChannelInboundHandler">ChannelInboundHandler</span>, <span class="extype" name="io.netty.channel.ChannelHandlerAdapter">ChannelHandlerAdapter</span>, <span class="extype" name="io.netty.channel.ChannelHandler">ChannelHandler</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="io.netty.channel.SimpleChannelInboundHandler">SimpleChannelInboundHandler</span>[<span class="extype" name="io.netty.handler.codec.http.FullHttpResponse">FullHttpResponse</span>], <span class="extype" name="io.netty.channel.ChannelInboundHandlerAdapter">ChannelInboundHandlerAdapter</span>, <span class="extype" name="io.netty.channel.ChannelInboundHandler">ChannelInboundHandler</span>, <span class="extype" name="io.netty.channel.ChannelHandlerAdapter">ChannelHandlerAdapter</span>, <span class="extype" name="io.netty.channel.ChannelHandler">ChannelHandler</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -63,7 +63,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="netcaty.http.client.PipelineInitializer"><span>PipelineInitializer</span></li><li class="in" name="io.netty.channel.ChannelInitializer"><span>ChannelInitializer</span></li><li class="in" name="io.netty.channel.ChannelInboundHandlerAdapter"><span>ChannelInboundHandlerAdapter</span></li><li class="in" name="io.netty.channel.ChannelInboundHandler"><span>ChannelInboundHandler</span></li><li class="in" name="io.netty.channel.ChannelHandlerAdapter"><span>ChannelHandlerAdapter</span></li><li class="in" name="io.netty.channel.ChannelHandler"><span>ChannelHandler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="netcaty.http_https.client.ResponseHandler"><span>ResponseHandler</span></li><li class="in" name="io.netty.channel.SimpleChannelInboundHandler"><span>SimpleChannelInboundHandler</span></li><li class="in" name="io.netty.channel.ChannelInboundHandlerAdapter"><span>ChannelInboundHandlerAdapter</span></li><li class="in" name="io.netty.channel.ChannelInboundHandler"><span>ChannelInboundHandler</span></li><li class="in" name="io.netty.channel.ChannelHandlerAdapter"><span>ChannelHandlerAdapter</span></li><li class="in" name="io.netty.channel.ChannelHandler"><span>ChannelHandler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -83,16 +83,16 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="netcaty.http.client.PipelineInitializer#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(resPromise_or_handler:Either[io.netty.util.concurrent.Promise[io.netty.handler.codec.http.FullHttpResponse],netcaty.http.ResponseHandler]):netcaty.http.client.PipelineInitializer"></a>
-      <a id="&lt;init&gt;:PipelineInitializer"></a>
+              <ol><li name="netcaty.http_https.client.ResponseHandler#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(resPromise_or_handler:Either[io.netty.util.concurrent.Promise[io.netty.handler.codec.http.FullHttpResponse],netcaty.HttpHttps.ResponseHandler]):netcaty.http_https.client.ResponseHandler"></a>
+      <a id="&lt;init&gt;:ResponseHandler"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">PipelineInitializer</span><span class="params">(<span name="resPromise_or_handler">resPromise_or_handler: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="io.netty.util.concurrent.Promise">Promise</span>[<span class="extype" name="io.netty.handler.codec.http.FullHttpResponse">FullHttpResponse</span>], <a href="../package.html#ResponseHandler=io.netty.handler.codec.http.FullHttpResponse=&gt;Unit" class="extmbr" name="netcaty.http.ResponseHandler">http.ResponseHandler</a>]</span>)</span>
+        <span class="name">ResponseHandler</span><span class="params">(<span name="resPromise_or_handler">resPromise_or_handler: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="io.netty.util.concurrent.Promise">Promise</span>[<span class="extype" name="io.netty.handler.codec.http.FullHttpResponse">FullHttpResponse</span>], <a href="../../HttpHttps$.html#ResponseHandler=io.netty.handler.codec.http.FullHttpResponse=&gt;Unit" class="extmbr" name="netcaty.HttpHttps.ResponseHandler">HttpHttps.ResponseHandler</a>]</span>)</span>
       </span>
       </h4>
       
@@ -144,6 +144,25 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="io.netty.channel.SimpleChannelInboundHandler#acceptInboundMessage" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="acceptInboundMessage(x$1:Any):Boolean"></a>
+      <a id="acceptInboundMessage(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">acceptInboundMessage</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleChannelInboundHandler</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -195,7 +214,7 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="io.netty.channel.ChannelInboundHandlerAdapter#channelRead" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="io.netty.channel.SimpleChannelInboundHandler#channelRead" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="channelRead(x$1:io.netty.channel.ChannelHandlerContext,x$2:Any):Unit"></a>
       <a id="channelRead(ChannelHandlerContext,Any):Unit"></a>
       <h4 class="signature">
@@ -207,13 +226,26 @@
         <span class="name">channelRead</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ChannelInboundHandlerAdapter → ChannelInboundHandler</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SimpleChannelInboundHandler → ChannelInboundHandlerAdapter → ChannelInboundHandler</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Exception]</span>
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="netcaty.http_https.client.ResponseHandler#channelRead0" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="channelRead0(ctx:io.netty.channel.ChannelHandlerContext,res:io.netty.handler.codec.http.FullHttpResponse):Unit"></a>
+      <a id="channelRead0(ChannelHandlerContext,FullHttpResponse):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">channelRead0</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>, <span name="res">res: <span class="extype" name="io.netty.handler.codec.http.FullHttpResponse">FullHttpResponse</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="netcaty.http_https.client.ResponseHandler">ResponseHandler</a> → SimpleChannelInboundHandler</dd></dl></div>
     </li><li name="io.netty.channel.ChannelInboundHandlerAdapter#channelReadComplete" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="channelReadComplete(x$1:io.netty.channel.ChannelHandlerContext):Unit"></a>
       <a id="channelReadComplete(ChannelHandlerContext):Unit"></a>
@@ -233,19 +265,19 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="io.netty.channel.ChannelInitializer#channelRegistered" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="io.netty.channel.ChannelInboundHandlerAdapter#channelRegistered" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="channelRegistered(x$1:io.netty.channel.ChannelHandlerContext):Unit"></a>
       <a id="channelRegistered(ChannelHandlerContext):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">final </span>
+        <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
         <span class="name">channelRegistered</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="io.netty.channel.ChannelHandlerContext">ChannelHandlerContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ChannelInitializer → ChannelInboundHandlerAdapter → ChannelInboundHandler</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ChannelInboundHandlerAdapter → ChannelInboundHandler</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Exception]</span>
@@ -437,19 +469,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="netcaty.http.client.PipelineInitializer#initChannel" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="initChannel(ch:io.netty.channel.socket.SocketChannel):Unit"></a>
-      <a id="initChannel(SocketChannel):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">initChannel</span><span class="params">(<span name="ch">ch: <span class="extype" name="io.netty.channel.socket.SocketChannel">SocketChannel</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="netcaty.http.client.PipelineInitializer">PipelineInitializer</a> → ChannelInitializer</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -626,8 +645,8 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="io.netty.channel.ChannelInitializer">
-              <h3>Inherited from <span class="extype" name="io.netty.channel.ChannelInitializer">ChannelInitializer</span>[<span class="extype" name="io.netty.channel.socket.SocketChannel">SocketChannel</span>]</h3>
+        <div class="parent" name="io.netty.channel.SimpleChannelInboundHandler">
+              <h3>Inherited from <span class="extype" name="io.netty.channel.SimpleChannelInboundHandler">SimpleChannelInboundHandler</span>[<span class="extype" name="io.netty.handler.codec.http.FullHttpResponse">FullHttpResponse</span>]</h3>
             </div><div class="parent" name="io.netty.channel.ChannelInboundHandlerAdapter">
               <h3>Inherited from <span class="extype" name="io.netty.channel.ChannelInboundHandlerAdapter">ChannelInboundHandlerAdapter</span></h3>
             </div><div class="parent" name="io.netty.channel.ChannelInboundHandler">
