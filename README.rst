@@ -10,19 +10,18 @@ Features
 
 HTTP:
 
-* Server, can start at random open port, very useful for tests
-* Client
-* Can handle chunks up to 16 MB
+* Server. Server can start at random open port, very useful for tests. It also
+  automatically handles "Expect 100 Continue" requests.
+* Client.
+* Can handle chunks up to 16 MB.
+* HTTPS.
 
-TODO (pull requests are welcome):
-
-* HTTPS
-* TCP
-
-`Scaladoc <http://ngocdaothanh.github.io/netcaty/#netcaty.http.package>`_
+TCP etc.: TODO (pull requests are welcome).
 
 Be familiar with Netty
 ----------------------
+
+`Netcaty Scaladoc <http://ngocdaothanh.github.io/netcaty/#netcaty.http.package>`_
 
 To create and inspect requests/responses, you should be familiar with things in
 package `io.netty.handler.codec.http <http://netty.io/4.0/api/io/netty/handler/codec/http/package-frame.html>`_
@@ -99,6 +98,14 @@ Async mode:
     ...
   })
 
+HTTPS
+-----
+
+Just replace ``netcaty.http`` in the above example with ``netcaty.https``.
+
+* Server: uses dummy certificate.
+* Client: accepts all certificates.
+
 Use with SBT
 ------------
 
@@ -106,7 +113,7 @@ Supported Scala versions: 2.10.x, 2.11.x
 
 ::
 
-  libraryDependencies += "tv.cntt" % "netcaty" %% "1.1"
+  libraryDependencies += "tv.cntt" % "netcaty" %% "1.2"
 
 Netcaty uses Netty 4. Javassist can boost Netty 4 speed. Optionally, you can add:
 

@@ -1,4 +1,4 @@
-package netcaty.http.client
+package netcaty.http_https.client
 
 import io.netty.channel.{
   ChannelHandlerContext, SimpleChannelInboundHandler,
@@ -7,7 +7,9 @@ import io.netty.channel.{
 import io.netty.handler.codec.http.FullHttpResponse
 import io.netty.util.concurrent.Promise
 
-class ResponseHandler(resPromise_or_handler: Either[Promise[FullHttpResponse], netcaty.http.ResponseHandler])
+import netcaty.HttpHttps
+
+class ResponseHandler(resPromise_or_handler: Either[Promise[FullHttpResponse], HttpHttps.ResponseHandler])
   extends SimpleChannelInboundHandler[FullHttpResponse]
 {
   override def channelRead0(ctx: ChannelHandlerContext, res: FullHttpResponse) {

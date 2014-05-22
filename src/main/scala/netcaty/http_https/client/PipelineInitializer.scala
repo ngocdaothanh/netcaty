@@ -1,22 +1,29 @@
-package netcaty.http.client
+package netcaty.http_https.client
 
 import io.netty.channel.{Channel, ChannelInitializer}
 import io.netty.channel.socket.SocketChannel
 import io.netty.handler.codec.http.{FullHttpResponse, HttpContentDecompressor, HttpObjectAggregator, HttpRequestEncoder, HttpResponseDecoder}
 import io.netty.util.concurrent.Promise
 
-class PipelineInitializer(resPromise_or_handler: Either[Promise[FullHttpResponse], netcaty.http.ResponseHandler])
+import netcaty.HttpHttps
+import netcaty.ssl.Ssl
+
+class PipelineInitializer(https: Boolean, resPromise_or_handler: Either[Promise[FullHttpResponse], HttpHttps.ResponseHandler])
   extends ChannelInitializer[SocketChannel]
 {
   def initChannel(ch: SocketChannel) {
-    ch.pipeline.addLast(
+    val p = ch.pipeline
+
+    if (https) p.addLast(Ssl.createClientHandler())
+
+    p.addLast(
       // Outbound
       new HttpRequestEncoder,
 
       // Inbound
       new HttpResponseDecoder,
       new HttpContentDecompressor,
-      new HttpObjectAggregator(netcaty.http.MAX_CONTENT_LENGTH),  // Handle chunks
+      new HttpObjectAggregator(HttpHttps.MAX_CONTENT_LENGTH),  // Handle chunks
       new ResponseHandler(resPromise_or_handler)
     )
   }
