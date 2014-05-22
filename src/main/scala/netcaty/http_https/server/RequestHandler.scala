@@ -15,28 +15,22 @@ class RequestHandler(server: Server, handler: HttpHttps.RequestHandler, stopAfte
   extends SimpleChannelInboundHandler[FullHttpRequest]
 {
   override def channelRead0(ctx: ChannelHandlerContext, req: FullHttpRequest) {
-    // Automatically handle "Expect 100 Continue" request,
-    // the handler doesn't have to handle it
-    val continue = HttpHeaders.is100ContinueExpected(req)
-    val res = if (continue) {
-      new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.CONTINUE)
-    } else {
-      val ret = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK)
-      ret.headers.set(HttpHeaders.Names.CONTENT_LENGTH, 0)
-      handler(req, ret)
-      ret
-    }
+    // HttpObjectAggregator automatically sends "Continue" response for
+    // "Expect 100 Continue" request.
+    //
+    // Experiment: curl -v -F name=somevalue http://localhost:9000
+    val res = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK)
+    res.headers.set(HttpHeaders.Names.CONTENT_LENGTH, 0)
+    handler(req, res)
 
     val future = ctx.channel.writeAndFlush(res)
-    if (!continue) {
-      if (stopAfterOneResponse)
-        future.addListener(new ChannelFutureListener {
-          override def operationComplete(future: ChannelFuture) {
-            server.stop()
-          }
-        })
-      else
-        future.addListener(ChannelFutureListener.CLOSE)
-    }
+    if (stopAfterOneResponse)
+      future.addListener(new ChannelFutureListener {
+        override def operationComplete(future: ChannelFuture) {
+          server.stop()
+        }
+      })
+    else
+      future.addListener(ChannelFutureListener.CLOSE)
   }
 }

@@ -14,14 +14,20 @@ class PipelineInitializer(https: Boolean, server: Server, handler: HttpHttps.Req
 
     if (https) p.addLast(Ssl.createServerHandler())
 
+    // HttpObjectAggregator automatically sends "Continue" response for
+    // "Expect 100 Continue" request.
+    //
+    // But: http://netty.io/4.0/api/io/netty/handler/codec/http/HttpObjectAggregator.html
+    // "Be aware that you need to have the HttpResponseEncoder or HttpRequestEncoder
+    // before the HttpObjectAggregator in the ChannelPipeline."
     p.addLast(
+      // Outbound
+      new HttpResponseEncoder,
+
       // Inbound
       new HttpRequestDecoder,
       new HttpObjectAggregator(HttpHttps.MAX_CONTENT_LENGTH),  // Handle chunks
-      new RequestHandler(server, handler, stopAfterOneResponse),
-
-      // Outbound
-      new HttpResponseEncoder
+      new RequestHandler(server, handler, stopAfterOneResponse)
     )
   }
 }

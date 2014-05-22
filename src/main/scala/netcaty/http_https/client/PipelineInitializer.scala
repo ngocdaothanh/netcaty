@@ -16,6 +16,9 @@ class PipelineInitializer(https: Boolean, resPromise_or_handler: Either[Promise[
 
     if (https) p.addLast(Ssl.createClientHandler())
 
+    // http://netty.io/4.0/api/io/netty/handler/codec/http/HttpObjectAggregator.html
+    // "Be aware that you need to have the HttpResponseEncoder or HttpRequestEncoder
+    // before the HttpObjectAggregator in the ChannelPipeline."
     p.addLast(
       // Outbound
       new HttpRequestEncoder,
