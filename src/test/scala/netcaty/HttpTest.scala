@@ -8,8 +8,8 @@ import io.netty.handler.codec.http.{DefaultFullHttpRequest, FullHttpResponse, Ht
 import io.netty.util.CharsetUtil
 import org.scalatest.{FlatSpec, Matchers}
 
-class Test extends FlatSpec with Matchers {
-  behavior of "Netcaty"
+class HttpTest extends FlatSpec with Matchers {
+  behavior of "HTTP(S)"
 
   for (s <- Seq(false, true)) {
     val protocol = if (s) "HTTPS" else "HTTP"
