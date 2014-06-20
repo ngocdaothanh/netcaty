@@ -101,10 +101,56 @@ Async mode:
     ...
   })
 
-HTTPS
------
+TCP server
+----------
 
-Just replace ``netcaty.Http`` in the above example with ``netcaty.Https``.
+You must know beforehand the length of the request. In a controlled environment
+like tests, that's not a big drawback.
+
+To listen on port 9000, receive exactly 123 bytes, then respond:
+
+::
+
+  netcaty.Tcp.respondOne(9000, 123, { requestBytes =>
+    // Return bytes to respond
+    "Hello World".getBytes
+  })
+
+::
+
+  val server = netcaty.Http.respond(9000, 123, { requestBytes =>
+    // Return bytes to respond
+    "Hello World".getBytes
+  })
+
+  // Later:
+  server.stop()
+
+TCP client
+----------
+
+You must know beforehand the length of the response. In a controlled environment
+like tests, that's not a big drawback.
+
+Sync mode:
+
+::
+
+  val responseBytes = netcaty.Tcp.request("localhost", 9000, requestBytes)
+
+Async mode:
+
+::
+
+  netcaty.Tcp.request("localhost", 9000, requestBytes, { responseBytes =>
+    ...
+  })
+
+HTTPS and TCP over SSL
+----------------------
+
+In the above examples, just replace ``netcaty.Http`` and ``netcaty.Tcp`` with
+``netcaty.Https`` and ``netcaty.Tcps``.
 
 * Server: uses dummy certificate.
 * Client: acepts all certificates.
@@ -116,13 +162,13 @@ Supported Scala versions: 2.10.x, 2.11.x
 
 ::
 
-  libraryDependencies += "tv.cntt" % "netcaty" %% "1.2"
+  libraryDependencies += "tv.cntt" % "netcaty" %% "1.3"
 
 Netcaty uses Netty 4. Javassist can boost Netty 4 speed. Optionally, you can add:
 
 ::
 
-  libraryDependencies += "org.javassist" % "javassist" % "3.18.1-GA"
+  libraryDependencies += "org.javassist" % "javassist" % "3.18.2-GA"
 
 Netcat
 ------

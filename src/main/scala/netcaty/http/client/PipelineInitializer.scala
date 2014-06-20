@@ -1,10 +1,9 @@
 package netcaty.http.client
 
-import io.netty.channel.{Channel, ChannelInitializer}
+import io.netty.channel.ChannelInitializer
 import io.netty.channel.socket.SocketChannel
 import io.netty.handler.codec.http.{FullHttpResponse, HttpContentDecompressor, HttpObjectAggregator, HttpRequestEncoder, HttpResponseDecoder}
 import io.netty.util.concurrent.Promise
-
 import netcaty.{http, Ssl}
 
 class PipelineInitializer(https: Boolean, resPromise_or_handler: Either[Promise[FullHttpResponse], http.ResponseHandler])

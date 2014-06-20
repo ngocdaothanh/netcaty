@@ -1,8 +1,6 @@
 package netcaty
 
 import io.netty.handler.codec.http.{FullHttpRequest, FullHttpResponse}
-import netcaty.http.client.Client
-import netcaty.http.server.Server
 
 package object http {
   type RequestHandler  = (FullHttpRequest, FullHttpResponse) => Unit

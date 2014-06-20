@@ -1,12 +1,8 @@
 package netcaty.http.client
 
-import io.netty.channel.{
-  ChannelHandlerContext, SimpleChannelInboundHandler,
-  ChannelFuture, ChannelFutureListener
-}
+import io.netty.channel.{ChannelHandlerContext, SimpleChannelInboundHandler}
 import io.netty.handler.codec.http.FullHttpResponse
 import io.netty.util.concurrent.Promise
-
 import netcaty.http
 
 class ResponseHandler(resPromise_or_handler: Either[Promise[FullHttpResponse], http.ResponseHandler])

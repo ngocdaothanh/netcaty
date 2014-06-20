@@ -11,30 +11,36 @@ import org.scalatest.{FlatSpec, Matchers}
 class HttpTest extends FlatSpec with Matchers {
   behavior of "HTTP(S)"
 
-  for (s <- Seq(false, true)) {
-    val protocol = if (s) "HTTPS" else "HTTP"
+  for (https <- Seq(false, true)) {
+    val protocol = if (https) "HTTPS" else "HTTP"
 
     it should s"receive correct response ($protocol, sync)" in {
-      val port = respondOneWithUriInBody(s)
+      val port = respondOneWithUriInBody(https)
+
       val path = "/test"
       val req  = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.GET, path)
-      val o    = if (s) Https else Http
+
+      val o    = if (https) Https else Http
       val res  = o.request("localhost", port, req)
       val body = readStringContent(res)
       res.release()
+
       body should be(path)
     }
 
     it should s"receive correct response ($protocol, async)" in {
-      val port        = respondOneWithUriInBody(s)
+      val port        = respondOneWithUriInBody(https)
+
       val path        = "/test"
       val req         = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.GET, path)
+
       val bodyPromise = Promise[String]()
-      val o           = if (s) Https else Http
+      val o           = if (https) Https else Http
       o.request("localhost", port, req, { res =>
         bodyPromise.success(readStringContent(res))
       })
-      val body = Await.result(bodyPromise.future, Duration.Inf)
+      val body        = Await.result(bodyPromise.future, Duration.Inf)
+
       body should be(path)
     }
   }
@@ -42,7 +48,7 @@ class HttpTest extends FlatSpec with Matchers {
   //----------------------------------------------------------------------------
 
   /** @return Port */
-  private def respondOneWithUriInBody(s: Boolean): Int = {
+  private def respondOneWithUriInBody(https: Boolean): Int = {
     val handler: http.RequestHandler = { (req, res) =>
       val uri   = req.getUri
       val bytes = uri.getBytes(CharsetUtil.UTF_8)
@@ -50,8 +56,7 @@ class HttpTest extends FlatSpec with Matchers {
       res.headers.set(HttpHeaders.Names.CONTENT_LENGTH, bytes.length)
     }
 
-    val server = if (s) Https.respondOne(0, handler) else Http.respondOne(0, handler)
-    server.getPort
+    if (https) Https.respondOne(handler) else Http.respondOne(handler)
   }
 
   private def readStringContent(res: FullHttpResponse): String = {
