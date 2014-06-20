@@ -16,7 +16,10 @@ HTTP:
 * Can handle chunks up to 16 MB.
 * HTTPS.
 
-TCP etc.: TODO (pull requests are welcome).
+TCP:
+
+* Server.
+* Client.
 
 Be familiar with Netty
 ----------------------

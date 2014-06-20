@@ -5,14 +5,13 @@ import io.netty.channel.socket.SocketChannel
 import io.netty.handler.codec.http.{HttpRequestDecoder, HttpObjectAggregator, HttpResponseEncoder}
 import io.netty.handler.stream.ChunkedWriteHandler
 
-import netcaty.HttpHttps
-import netcaty.ssl.Ssl
+import netcaty.{HttpHttps, Ssl}
 
 class PipelineInitializer(https: Boolean, server: Server, handler: HttpHttps.RequestHandler, stopAfterOneResponse: Boolean) extends ChannelInitializer[SocketChannel] {
   def initChannel(ch: SocketChannel) {
     val p = ch.pipeline
 
-    if (https) p.addLast(Ssl.createServerHandler())
+    if (https) p.addLast(Ssl.serverContext.newHandler(ch.alloc))
 
     // HttpObjectAggregator automatically sends "Continue" response for
     // "Expect 100 Continue" request.

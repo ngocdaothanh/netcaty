@@ -5,8 +5,7 @@ import io.netty.channel.socket.SocketChannel
 import io.netty.handler.codec.http.{FullHttpResponse, HttpContentDecompressor, HttpObjectAggregator, HttpRequestEncoder, HttpResponseDecoder}
 import io.netty.util.concurrent.Promise
 
-import netcaty.HttpHttps
-import netcaty.ssl.Ssl
+import netcaty.{HttpHttps, Ssl}
 
 class PipelineInitializer(https: Boolean, resPromise_or_handler: Either[Promise[FullHttpResponse], HttpHttps.ResponseHandler])
   extends ChannelInitializer[SocketChannel]
@@ -14,7 +13,7 @@ class PipelineInitializer(https: Boolean, resPromise_or_handler: Either[Promise[
   def initChannel(ch: SocketChannel) {
     val p = ch.pipeline
 
-    if (https) p.addLast(Ssl.createClientHandler())
+    if (https) p.addLast(Ssl.clientContext.newHandler(ch.alloc))
 
     // http://netty.io/4.0/api/io/netty/handler/codec/http/HttpObjectAggregator.html
     // "Be aware that you need to have the HttpResponseEncoder or HttpRequestEncoder
