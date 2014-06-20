@@ -1,9 +1,12 @@
+1.3:
+
+* Update Netty from 4.0.19 to 4.0.20
+
 1.2:
 
-* HTTP server automatically handle "Expect 100 Continue" requests
-* HTTPS server: uses dummy certificate
-* HTTPS client: accepts all certificates
-
+* HTTP(S) server: Automatically handles "Expect 100 Continue" requests
+* HTTPS server: Uses dummy certificate
+* HTTPS client: Accepts all certificates
 
 1.1:
 
