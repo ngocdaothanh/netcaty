@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>Client - netcaty.http_https.client.Client</title>
-          <meta name="description" content="Client - netcaty.http https.client.Client" />
-          <meta name="keywords" content="Client netcaty.http https.client.Client" />
+          <title>Client - netcaty.tcp.client.Client</title>
+          <meta name="description" content="Client - netcaty.tcp.client.Client" />
+          <meta name="keywords" content="Client netcaty.tcp.client.Client" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'netcaty.http_https.client.Client';
+            var hash = 'netcaty.tcp.client.Client$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -26,20 +26,20 @@
    	  </script>
     
         </head>
-        <body class="type">
+        <body class="value">
       <div id="definition">
-        <img src="../../../lib/class_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="netcaty">netcaty</a>.<a href="../package.html" class="extype" name="netcaty.http_https">http_https</a>.<a href="package.html" class="extype" name="netcaty.http_https.client">client</a></p>
+        <img src="../../../lib/object_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="netcaty">netcaty</a>.<a href="../package.html" class="extype" name="netcaty.tcp">tcp</a>.<a href="package.html" class="extype" name="netcaty.tcp.client">client</a></p>
         <h1>Client</h1>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Client</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">Client</span>
       </span>
       </h4>
       
@@ -63,7 +63,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="netcaty.http_https.client.Client"><span>Client</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="netcaty.tcp.client.Client"><span>Client</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -81,23 +81,7 @@
 
       <div id="template">
         <div id="allMembers">
-        <div id="constructors" class="members">
-              <h3>Instance Constructors</h3>
-              <ol><li name="netcaty.http_https.client.Client#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(https:Boolean,host:String,port:Int,req:io.netty.handler.codec.http.FullHttpRequest):netcaty.http_https.client.Client"></a>
-      <a id="&lt;init&gt;:Client"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Client</span><span class="params">(<span name="https">https: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="host">host: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="req">req: <span class="extype" name="io.netty.handler.codec.http.FullHttpRequest">FullHttpRequest</span></span>)</span>
-      </span>
-      </h4>
-      
-    </li></ol>
-            </div>
+        
 
         
 
@@ -299,29 +283,29 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="netcaty.http_https.client.Client#request" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="request(handler:netcaty.HttpHttps.ResponseHandler):Unit"></a>
-      <a id="request(HttpHttps.ResponseHandler):Unit"></a>
+    </li><li name="netcaty.tcp.client.Client#request" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="request(ssl:Boolean,host:String,port:Int,req:Array[Byte],responseLength:Int,handler:netcaty.tcp.ResponseHandler):Unit"></a>
+      <a id="request(Boolean,String,Int,Array[Byte],Int,tcp.ResponseHandler):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">request</span><span class="params">(<span name="handler">handler: <a href="../../HttpHttps$.html#ResponseHandler=io.netty.handler.codec.http.FullHttpResponse=&gt;Unit" class="extmbr" name="netcaty.HttpHttps.ResponseHandler">HttpHttps.ResponseHandler</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">request</span><span class="params">(<span name="ssl">ssl: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="host">host: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="req">req: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="responseLength">responseLength: <span class="extype" name="scala.Int">Int</span></span>, <span name="handler">handler: <a href="../package.html#ResponseHandler=Array[Byte]=&gt;Unit" class="extmbr" name="netcaty.tcp.ResponseHandler">tcp.ResponseHandler</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       
-    </li><li name="netcaty.http_https.client.Client#request" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="request():io.netty.handler.codec.http.FullHttpResponse"></a>
-      <a id="request():FullHttpResponse"></a>
+    </li><li name="netcaty.tcp.client.Client#request" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="request(ssl:Boolean,host:String,port:Int,req:Array[Byte],responseLength:Int):Array[Byte]"></a>
+      <a id="request(Boolean,String,Int,Array[Byte],Int):Array[Byte]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">request</span><span class="params">()</span><span class="result">: <span class="extype" name="io.netty.handler.codec.http.FullHttpResponse">FullHttpResponse</span></span>
+        <span class="name">request</span><span class="params">(<span name="ssl">ssl: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="host">host: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="req">req: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="responseLength">responseLength: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>
       </span>
       </h4>
       

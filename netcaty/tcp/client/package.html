@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>server - netcaty.http_https.server</title>
-          <meta name="description" content="server - netcaty.http https.server" />
-          <meta name="keywords" content="server netcaty.http https.server" />
+          <title>client - netcaty.tcp.client</title>
+          <meta name="description" content="client - netcaty.tcp.client" />
+          <meta name="keywords" content="client netcaty.tcp.client" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'netcaty.http_https.server.package';
+            var hash = 'netcaty.tcp.client.package';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -29,8 +29,8 @@
         <body class="value">
       <div id="definition">
         <img src="../../../lib/package_big.png" />
-        <p id="owner"><a href="../../package.html" class="extype" name="netcaty">netcaty</a>.<a href="../package.html" class="extype" name="netcaty.http_https">http_https</a></p>
-        <h1>server</h1>
+        <p id="owner"><a href="../../package.html" class="extype" name="netcaty">netcaty</a>.<a href="../package.html" class="extype" name="netcaty.tcp">tcp</a></p>
+        <h1>client</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -39,7 +39,7 @@
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <span class="name">server</span>
+        <span class="name">client</span>
       </span>
       </h4>
       
@@ -62,7 +62,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="netcaty.http_https.server.PipelineInitializer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="netcaty.tcp.client.PipelineInitializer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PipelineInitializerextendsChannelInitializer[io.netty.channel.socket.SocketChannel]"></a>
       <a id="PipelineInitializer:PipelineInitializer"></a>
       <h4 class="signature">
@@ -75,38 +75,41 @@
       </span>
       </h4>
       
-    </li><li name="netcaty.http_https.server.RequestHandler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RequestHandlerextendsSimpleChannelInboundHandler[io.netty.handler.codec.http.FullHttpRequest]"></a>
-      <a id="RequestHandler:RequestHandler"></a>
+    </li><li name="netcaty.tcp.client.ResponseHandler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ResponseHandlerextendsSimpleChannelInboundHandler[io.netty.buffer.ByteBuf]"></a>
+      <a id="ResponseHandler:ResponseHandler"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="RequestHandler.html"><span class="name">RequestHandler</span></a><span class="result"> extends <span class="extype" name="io.netty.channel.SimpleChannelInboundHandler">SimpleChannelInboundHandler</span>[<span class="extype" name="io.netty.handler.codec.http.FullHttpRequest">FullHttpRequest</span>]</span>
+        <a href="ResponseHandler.html"><span class="name">ResponseHandler</span></a><span class="result"> extends <span class="extype" name="io.netty.channel.SimpleChannelInboundHandler">SimpleChannelInboundHandler</span>[<span class="extype" name="io.netty.buffer.ByteBuf">ByteBuf</span>]</span>
       </span>
       </h4>
       
-    </li><li name="netcaty.http_https.server.Server" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ServerextendsAnyRef"></a>
-      <a id="Server:Server"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="Server.html"><span class="name">Server</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4>
-      <p class="comment cmt"></p>
     </li></ol>
             </div>
 
         
 
-        
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="netcaty.tcp.client.Client" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Client"></a>
+      <a id="Client:Client"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Client$.html"><span class="name">Client</span></a>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         
 

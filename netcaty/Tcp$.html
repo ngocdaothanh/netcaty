@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>Https - netcaty.Https</title>
-          <meta name="description" content="Https - netcaty.Https" />
-          <meta name="keywords" content="Https netcaty.Https" />
+          <title>Tcp - netcaty.Tcp</title>
+          <meta name="description" content="Tcp - netcaty.Tcp" />
+          <meta name="keywords" content="Tcp netcaty.Tcp" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../index.html';
-            var hash = 'netcaty.Https$';
+            var hash = 'netcaty.Tcp$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -28,9 +28,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <img src="../lib/object_big.png" />
+        <a href="Tcp.html" title="Go to companion"><img src="../lib/object_to_class_big.png" /></a>
         <p id="owner"><a href="package.html" class="extype" name="netcaty">netcaty</a></p>
-        <h1>Https</h1>
+        <h1><a href="Tcp.html" title="Go to companion">Tcp</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -39,13 +39,13 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Https</span><span class="result"> extends <a href="Http.html" class="extype" name="netcaty.Http">Http</a></span>
+        <span class="name">Tcp</span><span class="result"> extends <a href="Tcp.html" class="extype" name="netcaty.Tcp">Tcp</a></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="Http.html" class="extype" name="netcaty.Http">Http</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="Tcp.html" class="extype" name="netcaty.Tcp">Tcp</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -63,7 +63,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="netcaty.Https"><span>Https</span></li><li class="in" name="netcaty.Http"><span>Http</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="netcaty.Tcp"><span>Tcp</span></li><li class="in" name="netcaty.Tcp"><span>Tcp</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -283,110 +283,84 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="netcaty.Http#request" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="request(host:String,port:Int,req:io.netty.handler.codec.http.FullHttpRequest,handler:netcaty.http.ResponseHandler):Unit"></a>
-      <a id="request(String,Int,FullHttpRequest,ResponseHandler):Unit"></a>
+    </li><li name="netcaty.Tcp#request" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="request(host:String,port:Int,req:Array[Byte],responseLength:Int,handler:netcaty.tcp.ResponseHandler):Unit"></a>
+      <a id="request(String,Int,Array[Byte],Int,ResponseHandler):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">request</span><span class="params">(<span name="host">host: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="req">req: <span class="extype" name="io.netty.handler.codec.http.FullHttpRequest">FullHttpRequest</span></span>, <span name="handler">handler: <a href="http/package.html#ResponseHandler=io.netty.handler.codec.http.FullHttpResponse=&gt;Unit" class="extmbr" name="netcaty.http.ResponseHandler">ResponseHandler</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">request</span><span class="params">(<span name="host">host: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="req">req: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="responseLength">responseLength: <span class="extype" name="scala.Int">Int</span></span>, <span name="handler">handler: <a href="tcp/package.html#ResponseHandler=Array[Byte]=&gt;Unit" class="extmbr" name="netcaty.tcp.ResponseHandler">ResponseHandler</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Http.html" class="extype" name="netcaty.Http">Http</a></dd></dl></div>
-    </li><li name="netcaty.Http#request" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="request(host:String,port:Int,req:io.netty.handler.codec.http.FullHttpRequest):io.netty.handler.codec.http.FullHttpResponse"></a>
-      <a id="request(String,Int,FullHttpRequest):FullHttpResponse"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tcp.html" class="extype" name="netcaty.Tcp">Tcp</a></dd></dl></div>
+    </li><li name="netcaty.Tcp#request" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="request(host:String,port:Int,req:Array[Byte],responseLength:Int):Array[Byte]"></a>
+      <a id="request(String,Int,Array[Byte],Int):Array[Byte]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">request</span><span class="params">(<span name="host">host: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="req">req: <span class="extype" name="io.netty.handler.codec.http.FullHttpRequest">FullHttpRequest</span></span>)</span><span class="result">: <span class="extype" name="io.netty.handler.codec.http.FullHttpResponse">FullHttpResponse</span></span>
+        <span class="name">request</span><span class="params">(<span name="host">host: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="req">req: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="responseLength">responseLength: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Http.html" class="extype" name="netcaty.Http">Http</a></dd></dl></div>
-    </li><li name="netcaty.Http#respond" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respond(handler:netcaty.http.RequestHandler):Int"></a>
-      <a id="respond(RequestHandler):Int"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tcp.html" class="extype" name="netcaty.Tcp">Tcp</a></dd></dl></div>
+    </li><li name="netcaty.Tcp#respond" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="respond(resquestLength:Int,handler:netcaty.tcp.RequestHandler):Int"></a>
+      <a id="respond(Int,RequestHandler):Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">respond</span><span class="params">(<span name="handler">handler: <a href="http/package.html#RequestHandler=(io.netty.handler.codec.http.FullHttpRequest,io.netty.handler.codec.http.FullHttpResponse)=&gt;Unit" class="extmbr" name="netcaty.http.RequestHandler">RequestHandler</a></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">respond</span><span class="params">(<span name="resquestLength">resquestLength: <span class="extype" name="scala.Int">Int</span></span>, <span name="handler">handler: <a href="tcp/package.html#RequestHandler=Array[Byte]=&gt;Array[Byte]" class="extmbr" name="netcaty.tcp.RequestHandler">RequestHandler</a></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Starts server at a random open port.</p><div class="fullcomment"><div class="comment cmt"><p>Starts server at a random open port.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Http.html" class="extype" name="netcaty.Http">Http</a></dd></dl></div>
-    </li><li name="netcaty.Http#respond" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respond(port:Int,handler:netcaty.http.RequestHandler):netcaty.http.server.Server"></a>
-      <a id="respond(Int,RequestHandler):Server"></a>
+      <p class="shortcomment cmt">Starts server at a random open port.</p><div class="fullcomment"><div class="comment cmt"><p>Starts server at a random open port.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tcp.html" class="extype" name="netcaty.Tcp">Tcp</a></dd></dl></div>
+    </li><li name="netcaty.Tcp#respond" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="respond(port:Int,resquestLength:Int,handler:netcaty.tcp.RequestHandler):netcaty.tcp.server.Server"></a>
+      <a id="respond(Int,Int,RequestHandler):Server"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">respond</span><span class="params">(<span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="handler">handler: <a href="http/package.html#RequestHandler=(io.netty.handler.codec.http.FullHttpRequest,io.netty.handler.codec.http.FullHttpResponse)=&gt;Unit" class="extmbr" name="netcaty.http.RequestHandler">RequestHandler</a></span>)</span><span class="result">: <a href="http/server/Server.html" class="extype" name="netcaty.http.server.Server">Server</a></span>
+        <span class="name">respond</span><span class="params">(<span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="resquestLength">resquestLength: <span class="extype" name="scala.Int">Int</span></span>, <span name="handler">handler: <a href="tcp/package.html#RequestHandler=Array[Byte]=&gt;Array[Byte]" class="extmbr" name="netcaty.tcp.RequestHandler">RequestHandler</a></span>)</span><span class="result">: <a href="tcp/server/Server.html" class="extype" name="netcaty.tcp.server.Server">Server</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Http.html" class="extype" name="netcaty.Http">Http</a></dd></dl></div>
-    </li><li name="netcaty.Http#respondContentOne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respondContentOne(contentType:String,content:String):Int"></a>
-      <a id="respondContentOne(String,String):Int"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tcp.html" class="extype" name="netcaty.Tcp">Tcp</a></dd></dl></div>
+    </li><li name="netcaty.Tcp#respondOne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="respondOne(resquestLength:Int,handler:netcaty.tcp.RequestHandler):Int"></a>
+      <a id="respondOne(Int,RequestHandler):Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">respondContentOne</span><span class="params">(<span name="contentType">contentType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="content">content: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">respondOne</span><span class="params">(<span name="resquestLength">resquestLength: <span class="extype" name="scala.Int">Int</span></span>, <span name="handler">handler: <a href="tcp/package.html#RequestHandler=Array[Byte]=&gt;Array[Byte]" class="extmbr" name="netcaty.tcp.RequestHandler">RequestHandler</a></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Http.html" class="extype" name="netcaty.Http">Http</a></dd></dl></div>
-    </li><li name="netcaty.Http#respondContentOne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respondContentOne(port:Int,contentType:String,content:String):netcaty.http.server.Server"></a>
-      <a id="respondContentOne(Int,String,String):Server"></a>
+      <p class="shortcomment cmt">Starts server at a random open port.</p><div class="fullcomment"><div class="comment cmt"><p>Starts server at a random open port.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tcp.html" class="extype" name="netcaty.Tcp">Tcp</a></dd></dl></div>
+    </li><li name="netcaty.Tcp#respondOne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="respondOne(port:Int,resquestLength:Int,handler:netcaty.tcp.RequestHandler):netcaty.tcp.server.Server"></a>
+      <a id="respondOne(Int,Int,RequestHandler):Server"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">respondContentOne</span><span class="params">(<span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="contentType">contentType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="content">content: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http/server/Server.html" class="extype" name="netcaty.http.server.Server">Server</a></span>
+        <span class="name">respondOne</span><span class="params">(<span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="resquestLength">resquestLength: <span class="extype" name="scala.Int">Int</span></span>, <span name="handler">handler: <a href="tcp/package.html#RequestHandler=Array[Byte]=&gt;Array[Byte]" class="extmbr" name="netcaty.tcp.RequestHandler">RequestHandler</a></span>)</span><span class="result">: <a href="tcp/server/Server.html" class="extype" name="netcaty.tcp.server.Server">Server</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Http.html" class="extype" name="netcaty.Http">Http</a></dd></dl></div>
-    </li><li name="netcaty.Http#respondOne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respondOne(handler:netcaty.http.RequestHandler):Int"></a>
-      <a id="respondOne(RequestHandler):Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">respondOne</span><span class="params">(<span name="handler">handler: <a href="http/package.html#RequestHandler=(io.netty.handler.codec.http.FullHttpRequest,io.netty.handler.codec.http.FullHttpResponse)=&gt;Unit" class="extmbr" name="netcaty.http.RequestHandler">RequestHandler</a></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Starts server at a random open port.</p><div class="fullcomment"><div class="comment cmt"><p>Starts server at a random open port.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Http.html" class="extype" name="netcaty.Http">Http</a></dd></dl></div>
-    </li><li name="netcaty.Http#respondOne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respondOne(port:Int,handler:netcaty.http.RequestHandler):netcaty.http.server.Server"></a>
-      <a id="respondOne(Int,RequestHandler):Server"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">respondOne</span><span class="params">(<span name="port">port: <span class="extype" name="scala.Int">Int</span></span>, <span name="handler">handler: <a href="http/package.html#RequestHandler=(io.netty.handler.codec.http.FullHttpRequest,io.netty.handler.codec.http.FullHttpResponse)=&gt;Unit" class="extmbr" name="netcaty.http.RequestHandler">RequestHandler</a></span>)</span><span class="result">: <a href="http/server/Server.html" class="extype" name="netcaty.http.server.Server">Server</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Http.html" class="extype" name="netcaty.Http">Http</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Tcp.html" class="extype" name="netcaty.Tcp">Tcp</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -479,8 +453,8 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="netcaty.Http">
-              <h3>Inherited from <a href="Http.html" class="extype" name="netcaty.Http">Http</a></h3>
+        <div class="parent" name="netcaty.Tcp">
+              <h3>Inherited from <a href="Tcp.html" class="extype" name="netcaty.Tcp">Tcp</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
