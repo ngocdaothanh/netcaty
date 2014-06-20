@@ -1,4 +1,4 @@
-package netcaty.http_https.server
+package netcaty.http.server
 
 import io.netty.channel.{
   ChannelHandlerContext, SimpleChannelInboundHandler,
@@ -9,9 +9,9 @@ import io.netty.handler.codec.http.{
   DefaultFullHttpResponse, HttpHeaders, HttpResponseStatus, HttpVersion
 }
 
-import netcaty.HttpHttps
+import netcaty.http
 
-class RequestHandler(server: Server, handler: HttpHttps.RequestHandler, stopAfterOneResponse: Boolean)
+class RequestHandler(server: Server, handler: http.RequestHandler, stopAfterOneResponse: Boolean)
   extends SimpleChannelInboundHandler[FullHttpRequest]
 {
   override def channelRead0(ctx: ChannelHandlerContext, req: FullHttpRequest) {

@@ -43,7 +43,7 @@ Start server at port 9000:
 
 ::
 
-  netcaty.http.respondOne(9000, { case (req, res) =>
+  netcaty.Http.respondOne(9000, { case (req, res) =>
     // res is an empty 200 OK response.
     // Modify it to respond what you want.
   })
@@ -57,7 +57,7 @@ If you don't want to stop the server after one response:
 
 ::
 
-  val server = netcaty.http.respond(9000, { case (req, res) =>
+  val server = netcaty.Http.respond(9000, { case (req, res) =>
     // res is an empty 200 OK response.
     // Modify it to respond what you want.
   })
@@ -80,7 +80,7 @@ Sync mode:
   val req = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.GET, "/path")
 
   // req will be automatically released
-  val res = netcaty.http.request("localhost", 9000, req)
+  val res = netcaty.Http.request("localhost", 9000, req)
 
   // Use res
   ...
@@ -97,17 +97,17 @@ Async mode:
   val req = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.GET, "/path")
 
   // req and res will be automatically released
-  netcaty.http.request("localhost", 9000, req, { res =>
+  netcaty.Http.request("localhost", 9000, req, { res =>
     ...
   })
 
 HTTPS
 -----
 
-Just replace ``netcaty.http`` in the above example with ``netcaty.https``.
+Just replace ``netcaty.Http`` in the above example with ``netcaty.Https``.
 
 * Server: uses dummy certificate.
-* Client: accepts all certificates.
+* Client: acepts all certificates.
 
 Use with SBT
 ------------

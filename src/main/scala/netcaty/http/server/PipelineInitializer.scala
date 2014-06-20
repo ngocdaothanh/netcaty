@@ -1,13 +1,15 @@
-package netcaty.http_https.server
+package netcaty.http.server
 
 import io.netty.channel.ChannelInitializer
 import io.netty.channel.socket.SocketChannel
 import io.netty.handler.codec.http.{HttpRequestDecoder, HttpObjectAggregator, HttpResponseEncoder}
 import io.netty.handler.stream.ChunkedWriteHandler
 
-import netcaty.{HttpHttps, Ssl}
+import netcaty.{http, Ssl}
 
-class PipelineInitializer(https: Boolean, server: Server, handler: HttpHttps.RequestHandler, stopAfterOneResponse: Boolean) extends ChannelInitializer[SocketChannel] {
+class PipelineInitializer(
+  https: Boolean, server: Server, handler: http.RequestHandler, stopAfterOneResponse: Boolean
+) extends ChannelInitializer[SocketChannel] {
   def initChannel(ch: SocketChannel) {
     val p = ch.pipeline
 
@@ -25,7 +27,7 @@ class PipelineInitializer(https: Boolean, server: Server, handler: HttpHttps.Req
 
       // Inbound
       new HttpRequestDecoder,
-      new HttpObjectAggregator(HttpHttps.MAX_CONTENT_LENGTH),  // Handle chunks
+      new HttpObjectAggregator(http.MAX_CONTENT_LENGTH),  // Handle chunks
       new RequestHandler(server, handler, stopAfterOneResponse)
     )
   }

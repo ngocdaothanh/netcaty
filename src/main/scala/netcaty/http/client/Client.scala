@@ -1,4 +1,4 @@
-package netcaty.http_https.client
+package netcaty.http.client
 
 import io.netty.bootstrap.Bootstrap
 import io.netty.channel.{Channel, ChannelFuture, ChannelFutureListener}
@@ -7,7 +7,7 @@ import io.netty.channel.socket.nio.NioSocketChannel
 import io.netty.handler.codec.http.{FullHttpRequest, FullHttpResponse}
 import io.netty.util.concurrent.DefaultPromise
 
-import netcaty.HttpHttps
+import netcaty.http
 
 class Client(https: Boolean, host: String, port: Int, req: FullHttpRequest) {
   def request(): FullHttpResponse = {
@@ -28,7 +28,7 @@ class Client(https: Boolean, host: String, port: Int, req: FullHttpRequest) {
     resPromise.get()
   }
 
-  def request(handler: HttpHttps.ResponseHandler) {
+  def request(handler: http.ResponseHandler) {
     (new Bootstrap)
       .group(new NioEventLoopGroup(1))
       .channel(classOf[NioSocketChannel])

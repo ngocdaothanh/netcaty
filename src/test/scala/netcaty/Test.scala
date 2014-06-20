@@ -18,7 +18,7 @@ class Test extends FlatSpec with Matchers {
       val port = respondOneWithUriInBody(s)
       val path = "/test"
       val req  = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.GET, path)
-      val o    = if (s) https else http
+      val o    = if (s) Https else Http
       val res  = o.request("localhost", port, req)
       val body = readStringContent(res)
       res.release()
@@ -30,7 +30,7 @@ class Test extends FlatSpec with Matchers {
       val path        = "/test"
       val req         = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.GET, path)
       val bodyPromise = Promise[String]()
-      val o           = if (s) https else http
+      val o           = if (s) Https else Http
       o.request("localhost", port, req, { res =>
         bodyPromise.success(readStringContent(res))
       })
@@ -43,14 +43,14 @@ class Test extends FlatSpec with Matchers {
 
   /** @return Port */
   private def respondOneWithUriInBody(s: Boolean): Int = {
-    val handler: HttpHttps.RequestHandler = { (req, res) =>
+    val handler: http.RequestHandler = { (req, res) =>
       val uri   = req.getUri
       val bytes = uri.getBytes(CharsetUtil.UTF_8)
       res.content.writeBytes(bytes)
       res.headers.set(HttpHeaders.Names.CONTENT_LENGTH, bytes.length)
     }
 
-    val server = if (s) https.respondOne(0, handler) else http.respondOne(0, handler)
+    val server = if (s) Https.respondOne(0, handler) else Http.respondOne(0, handler)
     server.getPort
   }
 

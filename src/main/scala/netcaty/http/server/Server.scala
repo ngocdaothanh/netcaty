@@ -1,4 +1,4 @@
-package netcaty.http_https.server
+package netcaty.http.server
 
 import java.net.InetSocketAddress
 import io.netty.bootstrap.ServerBootstrap
@@ -7,12 +7,12 @@ import io.netty.channel.nio.NioEventLoopGroup
 import io.netty.channel.socket.nio.NioServerSocketChannel
 import io.netty.handler.codec.http.{FullHttpRequest, FullHttpResponse}
 
-import netcaty.HttpHttps
+import netcaty.http
 
 /**
  * @param port 0 means random open port; call realPort after starting to get the real port
  */
-class Server(https: Boolean, port: Int, handler: HttpHttps.RequestHandler) {
+class Server(https: Boolean, port: Int, handler: http.RequestHandler) {
   private var bossGroup:     NioEventLoopGroup = _
   private var workerGroup:   NioEventLoopGroup = _
   private var serverChannel: Channel           = _
