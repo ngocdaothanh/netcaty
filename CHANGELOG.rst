@@ -1,3 +1,7 @@
+1.4:
+
+* Update Netty from 4.0.20 to 4.0.21
+
 1.3:
 
 * Add TCP client and server
